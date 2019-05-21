@@ -53,4 +53,4 @@ play-java-event-logger> ~compile
 play-java-event-logger> ~run
 ```
 
-Hope that Eclipse pick changes :)
+Hope that Eclipse registers changes :)
