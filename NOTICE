@@ -1,0 +1,5 @@
+https://self-learning-java-tutorial.blogspot.com/2014/12/hibernate-lob-to-persist-large-text.html
+
+Packages in Play :
+Note that in Play, the controllers, models, and views package names are simply conventions that can be changed if needed (such as prefixing everything with com.yourcompany).
+source: https://www.playframework.com/documentation/2.7.x/Anatomy

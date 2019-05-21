@@ -1,0 +1,2 @@
+GET     /                           com.janasef.auditor.controllers.ApplicationController.index
+->     /v1/event                    event.Routes

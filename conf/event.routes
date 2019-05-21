@@ -1,0 +1,3 @@
+GET    /                      com.janasef.auditor.controllers.v1.event.EventController.list(request:Request)
+POST   /                      com.janasef.auditor.controllers.v1.event.EventController.create(request:Request)
+GET    /:id                   com.janasef.auditor.controllers.v1.event.EventController.show(request:Request,id: Long)
