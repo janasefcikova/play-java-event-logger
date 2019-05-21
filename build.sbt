@@ -2,7 +2,7 @@ name := """play-java-event-loggerr"""
 
 version := "2.7.x"
 
-val gatlingVersion = "2.3.1"
+lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 inThisBuild(
   List(
@@ -16,16 +16,6 @@ inThisBuild(
 )
 
 
-lazy val GatlingTest = config("gatling") extend Test
-
-lazy val root = (project in file(".")).enablePlugins(PlayJava, GatlingPlugin).configs(GatlingTest)
-  .settings(
-    inConfig(GatlingTest)(Defaults.testSettings)
-  )
-  .settings(
-    scalaSource in GatlingTest := baseDirectory.value / "/gatling/simulation"
-  )
-
 libraryDependencies += guice
 libraryDependencies += javaJpa
 libraryDependencies += "com.h2database" % "h2" % "1.4.199"
@@ -34,9 +24,6 @@ libraryDependencies += "org.hibernate" % "hibernate-core" % "5.4.2.Final"
 libraryDependencies += "io.dropwizard.metrics" % "metrics-core" % "3.2.6"
 libraryDependencies += "com.palominolabs.http" % "url-builder" % "1.1.0"
 libraryDependencies += "net.jodah" % "failsafe" % "1.0.5"
-
-libraryDependencies += "io.gatling.highcharts" % "gatling-charts-highcharts" % gatlingVersion % Test
-libraryDependencies += "io.gatling" % "gatling-test-framework" % gatlingVersion % Test
 
 // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
 EclipseKeys.preTasks := Seq(compile in Compile, compile in Test)
